@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentStart1">
+
+    <activity
+        android:id="@+id/deepLinkActivity"
+        android:name="com.shaikds.togather.view.activity.DeepLinkActivity"
+        android:label="activity_deep_link"
+        tools:layout="@layout/activity_deep_link">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="www.togatheril.com" />
+    </activity>
+    <fragment
+        android:id="@+id/fragmentStart3"
+        android:name="com.shaikds.togather.view.fragment.FragmentStart3"
+        android:label="FragmentStart3" />
+    <fragment
+        android:id="@+id/fragmentStart1"
+        android:name="com.shaikds.togather.view.fragment.FragmentStart1"
+        android:label="FragmentStart1" />
+    <fragment
+        android:id="@+id/fragmentStart2"
+        android:name="com.shaikds.togather.view.fragment.FragmentStart2"
+        android:label="FragmentStart2" />
+</navigation>

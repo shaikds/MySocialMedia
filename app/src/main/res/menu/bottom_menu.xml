@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/profile_bottom"
+        android:icon="@drawable/bottom_nav_profile_selector"
+        android:title="פרופיל"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/add_bottom"
+        android:icon="@drawable/bottom_nav_money_selector"
+        android:title="יצירה"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/search_bottom"
+        android:icon="@drawable/bottom_nav_search_selector"
+        android:title="חיפוש"
+        app:showAsAction="always" />
+
+
+</menu>

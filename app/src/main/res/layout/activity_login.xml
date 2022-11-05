@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".view.activity.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="150dp"
+            android:layout_height="210dp"
+            android:background="@drawable/decorator_top_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/splash_decorator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="270dp"
+            android:layout_height="100dp"
+            android:background="@drawable/page_title"
+            android:gravity="start|center"
+            android:padding="8dp"
+            android:text="@string/login_page_title"
+            android:textColor="@color/background"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/login_phone_number_et"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:inputType="phone"
+            android:digits="0123456789"
+            android:gravity="end|center"
+            android:singleLine="true"
+            android:background="@drawable/custom_input"
+            android:drawableEnd="@drawable/ic_baseline_phone_24"
+            android:drawablePadding="10dp"
+            android:hint="@string/phone_number"
+            android:paddingStart="10dp"
+            android:textColor="@color/dollarPrimary"
+            android:textColorHint="@color/grey"
+            android:textDirection="rtl"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+
+
+        <EditText
+            android:id="@+id/login_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:singleLine="true"
+            android:background="@drawable/custom_input"
+            android:drawableEnd="@drawable/custom_pass_input"
+            android:drawablePadding="10dp"
+            android:hint="@string/login_password"
+            android:paddingStart="10dp"
+            android:textColor="@color/dollarPrimary"
+            android:textColorHint="@color/grey"
+            android:textDirection="rtl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_phone_number_et" />
+
+
+        <CheckBox
+            android:id="@+id/login_pass_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/dollarPrimary"
+            android:layoutDirection="rtl"
+            android:text="@string/show_password"
+            android:textColor="@color/dollarPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_password_et" />
+
+        <TableRow
+            android:layout_width="185dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="6dp"
+            android:background="@color/dollarPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="420dp" />
+
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="64dp"
+            android:background="@drawable/back_button"
+            android:text="@string/login_btn"
+            android:textColor="@color/background"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_pass_checkbox" />
+
+        <Button
+            android:id="@+id/login_register_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            android:text="@string/login_register_btn"
+            android:layout_margin="16dp"
+            android:textColor="@color/background"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView19" />
+
+        <ProgressBar
+            android:id="@+id/login_pb"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@android:color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_register_btn" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/bottom_deco"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:background="@drawable/splash_decorator_bottom"
+            android:scaleType="fitCenter"
+            android:src="@drawable/togathertitlev5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

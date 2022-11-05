@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".view.activity.RegisterActivity">
+
+
+    <FrameLayout
+        android:id="@+id/register_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/splash_decorator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="end|center_vertical"
+                android:background="@drawable/page_title"
+                android:gravity="center"
+                android:padding="4dp"
+                android:singleLine="true"
+                android:text="@string/register_page_title"
+                android:textColor="@color/background"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/register_phone_et"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/custom_input"
+                android:digits="0123456789"
+                android:drawableEnd="@drawable/ic_baseline_phone_24"
+                android:drawablePadding="10dp"
+                android:gravity="end|center_vertical"
+                android:hint="@string/phone_number"
+                android:inputType="phone|number"
+                android:paddingStart="10dp"
+                android:textColor="@color/dollarPrimary"
+                android:textColorHint="@color/grey"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+            <EditText
+                android:id="@+id/register_sms_verify_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="136dp"
+                android:background="@drawable/custom_input"
+                android:drawableEnd="@drawable/ic_baseline_phone_24"
+                android:drawablePadding="10dp"
+                android:hint="@string/verification_code"
+                android:paddingStart="10dp"
+                android:textColor="@color/dollarPrimary"
+                android:textColorHint="@color/grey"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/register_signup_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_password_et" />
+
+            <EditText
+                android:id="@+id/register_password_et"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/custom_input"
+                android:drawableEnd="@drawable/custom_pass_input"
+                android:drawablePadding="10dp"
+                android:gravity="start|center"
+                android:hint="@string/register_password"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:textColor="@color/dollarPrimary"
+                android:textColorHint="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_phone_et" />
+
+
+            <EditText
+                android:id="@+id/register_confirm_password_et"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/custom_input"
+                android:drawableEnd="@drawable/custom_pass_input"
+                android:drawablePadding="10dp"
+                android:gravity="end|center"
+                android:hint="@string/register_password_repeat"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:textColor="@color/dollarPrimary"
+                android:textColorHint="@color/grey"
+                android:textDirection="rtl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_password_et" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="400dp"
+                android:layout_height="90dp"
+                android:background="@drawable/bottom_deco"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="350dp"
+                android:background="@drawable/bottom_left_splash"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_signup_btn"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+            <Button
+                android:id="@+id/register_signup_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/back_button"
+                android:text="@string/register_send_verification_sms"
+
+                android:textColor="@color/background"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_takanon_tv" />
+
+            <Button
+                android:id="@+id/register_verify_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/back_button"
+                android:text="@string/register_verify_code_text"
+                android:textColor="@color/background"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/register_password_checkbox"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <CheckBox
+                android:id="@+id/register_password_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:buttonTint="@color/dollarPrimary"
+                android:layoutDirection="rtl"
+                android:padding="8dp"
+                android:text="@string/show_password"
+                android:textColor="@color/dollarPrimary"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_confirm_password_et" />
+
+            <TextView
+                android:id="@+id/register_takanon_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="בהתחברותי/הצטרפותי אני מסכימ/ה לתנאי השימוש ומדיניות הפרטיות"
+                android:textColor="@color/dollarPrimary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_password_checkbox" />
+
+
+            <Button
+                android:id="@+id/register_login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="32dp"
+                android:background="@drawable/back_button_secondary"
+                android:text="@string/register_login_btn"
+                android:textColor="@color/background"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_signup_btn" />
+
+            <ProgressBar
+                android:id="@+id/register_progressbar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/dollarPrimary"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/imageView16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:background="@drawable/splash_decorator_bottom"
+                android:scaleType="centerInside"
+                android:src="@drawable/togathertitlev5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

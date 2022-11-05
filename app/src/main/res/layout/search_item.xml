@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/dollarPrimary"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="20dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_profile_post_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_baseline_person_24"
+                android:clickable="true"
+                android:scaleType="centerCrop" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tv_location_post_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_time_post_item"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="8dp"
+            android:padding="4dp"
+            android:text="מיקום"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textColorHint="@color/dollarPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+            app:layout_constraintStart_toEndOf="@+id/search_item_cv_iv"
+            app:layout_constraintTop_toBottomOf="@+id/tv_people_number_post_item" />
+
+        <TextView
+            android:id="@+id/tv_people_number_post_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="4dp"
+            android:text="כמות אנשים"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textColorHint="@color/dollarPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toEndOf="@+id/search_item_cv_iv"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_post_item" />
+
+        <TextView
+            android:id="@+id/tv_time_post_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:padding="4dp"
+            android:text="תאריך התחלה"
+            android:textColor="@color/background"
+            android:textColorHint="@color/dollarPrimary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="start|bottom"
+            android:text="ש''ח"
+            android:textColor="@color/background"
+            android:textDirection="rtl"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_price_post_item"
+            app:layout_constraintEnd_toStartOf="@+id/tv_price_post_item"
+            app:layout_constraintStart_toEndOf="@+id/search_item_cv_iv" />
+
+        <TextView
+            android:id="@+id/tv_price_post_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="מחיר"
+            android:textColor="@color/background"
+            android:textColorHint="@color/dollarPrimary"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+            app:layout_constraintStart_toEndOf="@+id/search_item_cv_iv"
+            app:layout_constraintTop_toBottomOf="@+id/tv_location_post_item" />
+
+
+        <LinearLayout
+            android:id="@+id/search_item_cv_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/search_iv_stroke"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_post_item">
+
+            <ImageView
+                android:id="@+id/iv_post_item"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="3dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_add_photo_alternate_24"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_search_item_discount"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start|bottom"
+            android:background="@color/dollarSecondary"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="כח רכישה"
+            android:textColor="@color/background"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/search_item_cv_iv" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:gravity="end"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <ImageButton
+                android:id="@+id/options_btn_post_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_post_option_24" />
+
+            <Button
+                android:id="@+id/like_btn_post_item"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_baseline_dislike_24"
+                android:padding="4dp"
+                android:text="@string/search_item_btn_like_string"
+                android:textColor="@color/background"
+                android:textSize="12sp"/>
+
+            <ImageButton
+                android:id="@+id/join_group_btn_post_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_group_add_24" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_post_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp"
+            android:text="כותרת"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textColorHint="@color/dollarPrimary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_time_post_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

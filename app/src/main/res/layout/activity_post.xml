@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    tools:context=".view.activity.UploadPostActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/upload_post_tv_original_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+
+            android:text="@string/original_price"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_desc_post" />
+
+        <TextView
+            android:id="@+id/upload_post_tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="@string/category"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upload_post_tv_max_people" />
+
+        <TextView
+            android:id="@+id/upload_post_tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="@string/location"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upload_post_tv_category" />
+
+        <TextView
+            android:id="@+id/upload_post_tv_min_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="@string/min_people_title"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upload_post_tv_group_price" />
+
+
+        <TextView
+            android:id="@+id/upload_post_deadline_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="@string/end_date_title"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upload_post_tv_location" />
+
+        <TextView
+            android:id="@+id/upload_post_tv_max_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="@string/max_people_title"
+
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upload_post_tv_min_people" />
+
+        <TextView
+            android:id="@+id/upload_post_tv_group_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="@string/group_price"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upload_post_tv_original_price" />
+
+        <VideoView
+            android:id="@+id/vv_post"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="8dp"
+
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/iv_post"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/btn_choose_file_post"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+        <Button
+            android:id="@+id/btn_choose_file_post"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/back_button_secondary"
+            android:text="@string/choose_image"
+            android:textColor="@color/background"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vv_post" />
+
+        <EditText
+            android:id="@+id/et_original_price_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_input"
+            android:hint="@string/upload_post_choose_et"
+            android:inputType="number"
+            android:nextFocusForward="@id/et_group_price_post"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@color/dollarPrimary"
+            android:textColorHint="@color/dollarPrimary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/upload_post_tv_original_price" />
+
+        <EditText
+            android:id="@+id/et_group_price_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_input"
+            android:hint="@string/upload_post_choose_et"
+            android:inputType="number"
+            android:nextFocusForward="@id/tv_category_post"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@color/dollarPrimary"
+            android:textColorHint="@color/dollarPrimary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/upload_post_tv_group_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_original_price_post" />
+
+        <EditText
+            android:id="@+id/et_min_people_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_input"
+            android:hint="@string/upload_post_choose_et"
+            android:inputType="number"
+            android:nextFocusForward="@id/et_max_people_post"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@color/dollarPrimary"
+            android:textColorHint="@color/dollarPrimary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/upload_post_tv_min_people"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_group_price_post" />
+
+        <EditText
+            android:id="@+id/et_max_people_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_input"
+            android:hint="@string/upload_post_choose_et"
+            android:inputType="number"
+            android:nextFocusForward="@id/et_max_people_post"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@color/dollarPrimary"
+            android:textColorHint="@color/dollarPrimary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/upload_post_tv_max_people"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_min_people_post" />
+
+
+        <TextView
+            android:id="@+id/et_end_date_post_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_input"
+            android:clickable="true"
+            android:focusable="true"
+            android:hint="@string/upload_post_choose_et"
+            android:nextFocusForward="@id/et_min_people_post"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@color/dollarPrimary"
+            android:textColorHint="@color/dollarPrimary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/upload_post_deadline_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_location_post" />
+
+        <TextView
+            android:id="@+id/tv_category_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_input"
+            android:clickable="true"
+            android:focusable="true"
+            android:headerBackground="@drawable/back_button"
+            android:hint="@string/upload_post_choose_et"
+            android:nextFocusForward="@id/tv_location_post"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@color/dollarPrimary"
+            android:textColorHint="@color/dollarPrimary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/upload_post_tv_category"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_max_people_post" />
+
+        <TextView
+            android:id="@+id/tv_location_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_input"
+            android:clickable="true"
+            android:focusable="true"
+            android:hint="@string/upload_post_choose_et"
+            android:nextFocusForward="@id/et_end_date_post_tv"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@color/dollarPrimary"
+            android:textColorHint="@color/dollarPrimary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/upload_post_tv_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category_post" />
+
+        <EditText
+            android:id="@+id/et_desc_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input"
+            android:gravity="center"
+            android:hint="פרטים על המוצר"
+            android:paddingStart="10dp"
+            android:singleLine="true"
+            android:textColor="@color/dollarPrimary"
+            android:textColorHint="@color/dollarPrimary"
+            android:textDirection="rtl"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_title_post" />
+
+        <EditText
+            android:id="@+id/et_title_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input"
+            android:gravity="center"
+
+            android:hint="כותרת"
+            android:paddingStart="10dp"
+            android:singleLine="true"
+            android:textColor="@color/dollarPrimary"
+            android:textColorHint="@color/dollarPrimary"
+            android:textDirection="rtl"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_choose_file_post" />
+
+
+        <ProgressBar
+            android:id="@+id/pb_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_upload_post"
+            app:layout_constraintVertical_bias="0.627" />
+
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/splash_decorator_bottom"
+            android:padding="80dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_upload_post"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_button"
+            android:padding="16dp"
+            android:text="@string/create_group_btn"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+            app:layout_constraintEnd_toEndOf="@+id/imageView13"
+            app:layout_constraintStart_toStartOf="@+id/imageView13"
+            app:layout_constraintTop_toTopOf="@+id/imageView13" />
+
+        <RadioGroup
+            android:id="@+id/upload_post_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upload_post_deadline_tv">
+
+
+            <RadioButton
+                android:id="@+id/upload_post_rb_take"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/dollarPrimary"
+                android:checked="true"
+                android:text="@string/shipment_take_away"
+                android:textColor="@color/dollarPrimary"
+                android:textDirection="rtl" />
+
+
+            <RadioButton
+                android:id="@+id/upload_post_rb_deliever"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/dollarPrimary"
+                android:text="@string/shipment_delivery"
+                android:textColor="@color/dollarPrimary" />
+
+            <RadioButton
+                android:id="@+id/upload_post_rb_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/dollarPrimary"
+                android:text="@string/shipment_method_all"
+                android:textColor="@color/dollarPrimary"
+                android:textDirection="rtl" />
+
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

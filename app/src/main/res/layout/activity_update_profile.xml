@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".view.activity.UpdateProfile">
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+
+        android:background="@drawable/splash_decorator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@drawable/page_title"
+        android:gravity="center|start"
+        android:text="עדכון פרופיל"
+        android:textColor="@color/background"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_profile_name_et"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/custom_input"
+        android:drawableRight="@drawable/ic_baseline_person_24"
+        android:drawablePadding="6dp"
+        android:padding="8dp"
+        android:text="@string/private_name"
+        android:textColor="@color/dollarPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView28"
+         />
+
+    <EditText
+        android:id="@+id/edit_profile_prof_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/custom_input"
+        android:drawableRight="@drawable/ic_baseline_profession_24"
+        android:drawablePadding="6dp"
+        android:padding="8dp"
+
+        android:text="@string/proffession"
+        android:textColor="@color/dollarPrimary"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_bio_et" />
+
+
+    <EditText
+        android:id="@+id/edit_profile_company_et"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/custom_input"
+        android:drawableRight="@drawable/ic_baseline_company_24"
+        android:drawablePadding="6dp"
+        android:padding="8dp"
+        android:text="@string/update_profile_comp_name"
+        android:textColor="@color/dollarPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_phone_et" />
+
+    <EditText
+        android:id="@+id/edit_profile_bio_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/custom_input"
+        android:drawableRight="@drawable/ic_baseline_info_24"
+        android:drawablePadding="6dp"
+        android:padding="8dp"
+
+        android:text="@string/description_tv"
+        android:textColor="@color/dollarPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_name_et" />
+
+    <EditText
+        android:id="@+id/edit_profile_email_et"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/custom_input"
+        android:drawableRight="@drawable/ic_baseline_email_24"
+        android:drawablePadding="6dp"
+        android:padding="8dp"
+        android:text="@string/email_input"
+        android:textColor="@color/dollarPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_website_et" />
+
+    <EditText
+        android:id="@+id/edit_profile_website_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/custom_input"
+        android:drawableRight="@drawable/ic_baseline_web_24"
+        android:drawablePadding="6dp"
+
+        android:padding="8dp"
+
+        android:text="@string/website_input"
+        android:textColor="@color/dollarPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_company_et" />
+
+    <EditText
+        android:id="@+id/edit_profile_phone_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/custom_input"
+        android:drawableRight="@drawable/ic_baseline_phone_24"
+        android:drawablePadding="6dp"
+        android:padding="8dp"
+
+        android:text="@string/phone_number"
+        android:textColor="@color/dollarPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_prof_et" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bottom_deco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/edit_profile_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/back_button_secondary"
+        android:padding="3dp"
+        android:text="שמור פרופיל"
+        android:textColor="@color/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textStyle="bold"
+        android:text="* ללא מייל אין אופציה לאיפוס הסיסמא"
+        android:textColor="@color/dollarPrimary"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView29"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_email_et" />
+
+    <ProgressBar
+        android:id="@+id/update_profile_pb"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

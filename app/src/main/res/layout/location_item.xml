@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    android:padding="4dp"
+    app:cardElevation="4dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/location_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dollarPrimary"
+        android:padding="8dp"
+        android:text="עיר"
+        android:textAlignment="center"
+        android:textColor="@color/background"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/location_item_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_margin="10dp"
+        android:background="@color/dollarPrimary"
+        />
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/profileFragment">
+
+    <action android:id="@+id/action_global_fragment_group_view"
+        app:destination="@id/fragmentGroupView"
+        app:launchSingleTop="true"
+        />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.shaikds.togather.view.fragment.ProfileFragment"
+        android:label="profileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_createFragment"
+            app:destination="@id/createFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_fragmentGroupView"
+            app:popUpTo="@+id/fragmentGroupView"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"
+            app:destination="@id/fragmentGroupView" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.shaikds.togather.view.fragment.UsersFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_usersFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_usersFragment_to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.shaikds.togather.view.fragment.CreateFragment"
+        android:label="CreateFragment" >
+        <action
+            android:id="@+id/action_createFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_createFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_createFragment_to_takanonFragment"
+            app:destination="@id/takanonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGroupView"
+        android:name="com.shaikds.togather.view.fragment.FragmentGroupView"
+        android:label="fragment_group_view"
+        tools:layout="@layout/fragment_group_view" >
+        <action
+            android:id="@+id/action_fragmentGroupView_to_searchFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/searchFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_fragmentGroupView_to_otherUserProfileFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+        <action
+            android:id="@+id/action_fragmentGroupView_to_profileFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/profileFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_fragmentGroupView_to_fragmentEditGroup"
+            app:destination="@id/fragmentEditGroup" />
+        <action
+            android:id="@+id/action_fragmentGroupView_to_fragmentBeManager"
+            app:destination="@id/fragmentBeManager" />
+        <action
+            android:id="@+id/action_fragmentGroupView_to_fragmentPayment"
+            app:launchSingleTop="true"
+            app:destination="@id/fragmentPayment" />
+        <action
+            android:id="@+id/action_fragmentGroupView_to_fragmentProfileGroupsPage"
+            app:destination="@id/fragmentProfileGroupsPage" />
+        <action
+            android:id="@+id/action_fragmentGroupView_self"
+            app:destination="@id/fragmentGroupView" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.shaikds.togather.view.fragment.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_createFragment"
+            app:destination="@id/createFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_fragmentGroupView"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/fragmentGroupView"
+            app:destination="@id/fragmentGroupView" />
+        <action
+            android:id="@+id/action_searchFragment_to_otherUserProfileFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/searchFragment"
+            app:destination="@id/otherUserProfileFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherUserProfileFragment"
+        android:name="com.shaikds.togather.view.fragment.OtherUserProfileFragment"
+        android:label="OtherUserProfileFragment" >
+        <action
+            android:id="@+id/action_otherUserProfileFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_otherUserProfileFragment_to_fragmentGroupView"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/fragmentGroupView"
+            app:destination="@id/fragmentGroupView" />
+        <action
+            android:id="@+id/action_otherUserProfileFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+        <action
+            android:id="@+id/action_otherUserProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEditGroup"
+        android:name="com.shaikds.togather.view.fragment.FragmentEditGroup"
+        android:label="FragmentEditGroup" >
+        <action
+            android:id="@+id/action_fragmentEditGroup_to_fragmentGroupView"
+            app:destination="@id/fragmentGroupView" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBeManager"
+        android:name="com.shaikds.togather.view.fragment.FragmentBeManager"
+        android:label="fragment_be_manager"
+        tools:layout="@layout/fragment_be_manager" >
+        <action
+            android:id="@+id/action_fragmentBeManager_to_fragmentGroupView"
+            app:destination="@id/fragmentGroupView" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPayment"
+        android:name="com.shaikds.togather.view.fragment.FragmentPayment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_fragmentPayment_to_fragmentGroupView"
+            app:destination="@id/fragmentGroupView" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.shaikds.togather.view.fragment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfileGroupsPage"
+        android:name="com.shaikds.togather.view.fragment.FragmentProfileGroupsPage"
+        android:label="fragment_profile_store_page"
+        tools:layout="@layout/fragment_profile_store_page" >
+        <action
+            android:id="@+id/action_fragmentProfileGroupsPage_to_fragmentGroupView"
+            app:destination="@id/fragmentGroupView" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfileStorePage"
+        android:name="com.shaikds.togather.view.fragment.FragmentProfileStorePage"
+        android:label="FragmentProfileStorePage" >
+        <action
+            android:id="@+id/action_fragmentProfileStorePage_to_fragmentGroupView"
+            app:destination="@id/fragmentGroupView" />
+        <action
+            android:id="@+id/action_fragmentProfileStorePage_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/deepLinkActivity"
+        android:name="com.shaikds.togather.view.activity.DeepLinkActivity"
+        android:label="activity_deep_link"
+        tools:layout="@layout/activity_deep_link" />
+    <fragment
+        android:id="@+id/takanonFragment"
+        android:name="com.shaikds.togather.view.fragment.TakanonFragment"
+        android:label="TakanonFragment" >
+        <action
+            android:id="@+id/action_takanonFragment_to_createFragment"
+            app:destination="@id/createFragment" />
+    </fragment>
+</navigation>

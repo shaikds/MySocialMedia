@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/create_activity_container"
+    android:background="@color/dollarPrimary"
+    tools:context=".view.activity.CreateProfile">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/decorator_top_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="@drawable/page_title"
+                android:gravity="end|center"
+                android:padding="8dp"
+                android:text="@string/title_create_user_act"
+                android:textColor="@color/white"
+
+                android:textDirection="rtl"
+                android:textSize="32sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="75dp"
+                app:cardElevation="8dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7">
+
+                <ImageView
+                    android:id="@+id/create_profile_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bottom_deco"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </ImageView>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_image">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/splash_decorator_bottom"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/create_profile_name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_input"
+                        android:drawableRight="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="6dp"
+                        android:hint="@string/private_name"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/create_profile_prof_et"
+                        android:paddingStart="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/dollarPrimary"
+                        android:textColorHint="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/create_profile_prof_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_input"
+                        android:drawableRight="@drawable/ic_baseline_profession_24"
+                        android:drawablePadding="6dp"
+                        android:hint="@string/create_prof_profession"
+                        android:maxLines="1"
+
+                        android:nextFocusForward="@+id/create_profile_company_et"
+                        android:paddingStart="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/dollarPrimary"
+
+                        android:textColorHint="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/create_profile_company_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_input"
+                        android:drawableRight="@drawable/ic_baseline_company_24"
+                        android:drawablePadding="6dp"
+                        android:hint="@string/company_name"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/create_profile_bio_et"
+                        android:paddingStart="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/dollarPrimary"
+                        android:textColorHint="@color/grey"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/create_profile_bio_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_input"
+                        android:drawableRight="@drawable/ic_baseline_info_24"
+                        android:drawablePadding="6dp"
+                        android:hint="תיאור על עצמי(עד 50 תווים)"
+                        android:maxLength="50"
+                        android:maxLines="3"
+
+                        android:nextFocusForward="@+id/create_profile_website_et"
+                        android:paddingStart="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/dollarPrimary"
+                        android:textColorHint="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/create_profile_email_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_input"
+                        android:clickable="false"
+                        android:drawableRight="@drawable/ic_baseline_email_24"
+                        android:drawablePadding="6dp"
+                        android:hint="@string/email_input"
+                        android:maxLines="1"
+
+                        android:paddingStart="5dp"
+                        android:singleLine="true"
+
+                        android:textColor="@color/dollarPrimary"
+
+                        android:textColorHint="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/create_profile_website_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_input"
+                        android:drawableRight="@drawable/ic_baseline_web_24"
+                        android:drawablePadding="6dp"
+                        android:hint="@string/website_input"
+                        android:maxLines="1"
+                        android:paddingStart="5dp"
+
+                        android:singleLine="true"
+                        android:textColor="@color/dollarPrimary"
+                        android:textColorHint="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/create_profile_phone_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_input"
+                        android:drawableRight="@drawable/ic_baseline_phone_24"
+                        android:drawablePadding="6dp"
+                        android:hint="@string/phone_input"
+                        android:gravity="end"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/create_profile_btn"
+                        android:paddingStart="5dp"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/dollarPrimary"
+                        android:textColorHint="@color/grey" />
+
+                    <Button
+                        android:id="@+id/create_profile_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/bottom_deco"
+                        android:paddingBottom="4dp"
+                        android:text="@string/btn_save_profile"
+                        android:textColor="@color/background"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <ProgressBar
+                android:id="@+id/create_profile_pb"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragment.FragmentBeManager">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dollarPrimary"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="end"
+            android:background="@drawable/page_title"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="טופס ניהול"
+            android:textColor="@color/background"
+            android:textSize="32sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="16dp"
+            android:gravity="start"
+            android:padding="4dp"
+            android:text="@string/be_manager_up_note"
+            android:textColor="@color/background"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="16dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:text="@string/min_people_title"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/be_manager_min_people"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input"
+            android:gravity="end"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/strong_light_green" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="4dp"
+            android:text="@string/max_people_title"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/be_manager_max_people"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input"
+            android:gravity="end"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/strong_light_green" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:text="@string/original_price"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/be_manager_original_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input"
+            android:gravity="end"
+            android:inputType="number"
+
+            android:singleLine="true"
+            android:textColor="@color/strong_light_green" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:text="@string/group_discount_price"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/be_manager_group_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input"
+            android:gravity="end"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/strong_light_green" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="4dp"
+            android:text="@string/location"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/be_manager_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input"
+            android:maxLines="1"
+            android:singleLine="true"
+
+            android:textAlignment="viewEnd"
+            android:textColor="@color/strong_light_green" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="4dp"
+            android:text="תאריך דדליין - קבוצה"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/be_manager_end_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input"
+            android:gravity="end"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="@color/strong_light_green" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:text="@string/be_manager_supply_method"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/be_manager_shipment_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/strong_light_green" />
+
+        <Button
+            android:id="@+id/be_manager_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:background="@drawable/back_button_secondary"
+            android:padding="8dp"
+            android:text="התחל קבוצת רכישה"
+            android:textSize="18sp" />
+
+
+        <ProgressBar
+            android:id="@+id/be_manager_pb"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/dollarPrimary"
+    tools:context=".view.fragment.UsersFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/search_iv_stroke"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewuserlistitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/item_group_search_iv"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_baseline_person_24"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/item_group_search_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="כותרת"
+            android:textColor="@color/background"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardviewuserlistitem"
+            app:layout_constraintEnd_toStartOf="@+id/cardviewuserlistitem"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_group_search_dates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name_listitem"
+            android:layout_margin="8dp"
+            android:text="תאריך התחלה-תאריך סיום"
+            android:textColor="@color/background"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_group_search_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name_listitem"
+            android:layout_margin="8dp"
+            android:text="עיר"
+            android:textColor="@color/background"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/cardviewuserlistitem"
+            app:layout_constraintTop_toBottomOf="@+id/item_group_search_title" />
+
+        <TextView
+            android:id="@+id/item_group_search_member_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_group_search_location"
+            android:layout_margin="8dp"
+            android:text="0/0"
+            android:textColor="@color/background"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/cardviewuserlistitem"
+            app:layout_constraintTop_toBottomOf="@+id/item_group_search_location" />
+
+        <TextView
+            android:id="@+id/item_group_search_tv_label"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start|bottom"
+            android:background="@color/dollarSecondary"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="כח רכישה"
+            android:textColor="@color/background"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+

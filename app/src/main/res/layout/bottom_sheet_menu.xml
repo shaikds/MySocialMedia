@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/dollarPrimary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/back_button_secondary"
+            android:drawableRight="@drawable/ic_baseline_power_settings_new_24"
+            android:drawablePadding="10dp"
+            android:padding="5dp"
+            android:paddingStart="6dp"
+            android:text="@string/logout"
+            android:textColor="@color/background"
+            android:textSize="25sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/dollarPrimary">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/back_button_secondary"
+            android:drawableRight="@drawable/ic_baseline_delete_24"
+            android:drawablePadding="10dp"
+            android:padding="5dp"
+            android:paddingStart="6dp"
+            android:text="@string/delete_user"
+            android:textColor="@color/background"
+            android:textSize="25sp" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_delete_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/dollarPrimary"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/back_button_secondary"
+            android:drawableEnd="@drawable/ic_baseline_delete_24"
+            android:drawablePadding="10dp"
+            android:padding="5dp"
+            android:paddingStart="6dp"
+            android:text="@string/leave_group"
+            android:textColor="@color/background"
+            android:textSize="25sp" />
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

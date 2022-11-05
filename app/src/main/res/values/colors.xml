@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="strong_light_green">#53b757</color>
+    <color name="light_green">#6cdf94</color>
+    <color name="deep_green">#449c46</color>
+    <color name="fade_green">#689568</color>
+    <color name="faded_green">#a8cbb1</color>
+    <color name="gray_green">#444c4c</color>
+    <color name="grayer_green">#455c4c</color>
+    <color name="red">#602126</color>
+    <color name="grey">#AAA4AA</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dollarPrimary">#53a687</color>
+    <color name="dollarSecondary">#c1d96c</color>
+    <color name="dollarThird">#def294</color>
+    <color name="btn_stroke_orange">#f2b685</color>
+    <color name="background">#e8faf4</color>
+
+
+</resources>

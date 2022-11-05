@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/decorator_top_1"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="כולם מרוויחים"
+        android:textColor="@color/background"
+        android:textDirection="rtl"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fragment_start_2_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="בעלי עסקים? מעוניינים להגיע ליותר לקוחות ולהגדיל את
+כמות העסקאות החודשית בעסק? הקימו קבוצות רכישה בחינם והתחילו למכור ולהרוויח יותר מהרגע הראשון!"
+        android:textColor="@color/dollarPrimary"
+        android:textDirection="rtl"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="צרכנים? מהיום הכוח הוא בידיים שלכם! בקשו קבוצות רכישה מבעלי עסקים או התחילו להצטרף לקבוצות רכישה במגוון תחומים הקיימים בשוק ולשלם קצת עבור אותם המוצרים שיעלו יותר יקר מחוץ לאפליקציה. "
+
+        android:textColor="@color/dollarPrimary"
+        android:textDirection="rtl"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
